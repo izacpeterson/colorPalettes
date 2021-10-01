@@ -7,6 +7,11 @@
   list-style: none;
 }
 $primary: #33cc33;
+$bg: white;
+
+body {
+  background-color: $bg;
+}
 nav {
   display: flex;
   background-color: $primary;
@@ -22,12 +27,18 @@ button.navItem {
   border: none;
 }
 .card {
-  box-shadow: 0 0 5px rgb(201, 201, 201);
   margin: 20px;
   text-align: center;
+  width: 30vw;
+}
+.paletteList {
+  display: flex;
+  flex-wrap: wrap;
 }
 .palette {
   display: flex;
+  border-radius: 20px;
+  overflow: hidden;
 }
 .color {
   height: 100px;
@@ -35,15 +46,22 @@ button.navItem {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  margin: 10px;
+  background: none;
+  border: none;
 }
 .colorFull {
   height: 50vh;
-  width: 1000%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
   margin: 10px;
+}
+input[type="color"] {
+  -webkit-appearance: none;
+  border: none;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+  border: none;
 }
 .text {
   content: attr(title);
@@ -51,12 +69,7 @@ button.navItem {
   width: 100%;
   text-align: center;
 }
-input {
-  border: none;
-  background: white;
-  width: 100%;
-  text-align: center;
-}
+
 input:focus {
   outline: none;
 }

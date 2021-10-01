@@ -6,6 +6,10 @@
   list-style: none;
 }
 
+body {
+  background-color: white;
+}
+
 nav {
   display: flex;
   background-color: #33cc33;
@@ -24,13 +28,20 @@ button.navItem {
 }
 
 .card {
-  box-shadow: 0 0 5px #c9c9c9;
   margin: 20px;
   text-align: center;
+  width: 30vw;
+}
+
+.paletteList {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .palette {
   display: flex;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .color {
@@ -39,28 +50,31 @@ button.navItem {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  margin: 10px;
+  background: none;
+  border: none;
 }
 
 .colorFull {
   height: 50vh;
-  width: 1000%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
   margin: 10px;
+}
+
+input[type=color] {
+  -webkit-appearance: none;
+  border: none;
+}
+
+input[type=color]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type=color]::-webkit-color-swatch {
+  border: none;
 }
 
 .text {
   content: attr(title);
   background-color: white;
-  width: 100%;
-  text-align: center;
-}
-
-input {
-  border: none;
-  background: white;
   width: 100%;
   text-align: center;
 }

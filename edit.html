@@ -25,35 +25,34 @@
         <navbar v-for="link in navbar" v-bind:link="link"></navbar>
         <button class="account material-icons navItem">account_circle</button>
       </nav>
-      <div class="fullPalette">
-        <div class="palette">
-          <input
-            class="colorFull"
-            type="color"
-            v-model="palettes[editing].palette[0]"
-          />
+      <div class="palette">
+        <input
+          class="color colorFull"
+          type="color"
+          v-bind:value="palettes[editing].palette[0]"
+          v-model="palettes[editing].palette[0]"
+        />
 
-          <input
-            class="colorFull"
-            type="color"
-            v-model="palettes[editing].palette[1]"
-          />
-          <input
-            class="colorFull"
-            type="color"
-            v-model="palettes[editing].palette[2]"
-          />
-          <input
-            class="colorFull"
-            type="color"
-            v-model="palettes[editing].palette[3]"
-          />
-          <input
-            class="colorFull"
-            type="color"
-            v-model="palettes[editing].palette[4]"
-          />
-        </div>
+        <input
+          class="color colorFull"
+          type="color"
+          v-model="palettes[editing].palette[1]"
+        />
+        <input
+          class="color colorFull"
+          type="color"
+          v-model="palettes[editing].palette[2]"
+        />
+        <input
+          class="color colorFull"
+          type="color"
+          v-model="palettes[editing].palette[3]"
+        />
+        <input
+          class="color colorFull"
+          type="color"
+          v-model="palettes[editing].palette[4]"
+        />
       </div>
       <button v-on:click="savePalette">Save</button>
     </div>
