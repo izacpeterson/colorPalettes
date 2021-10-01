@@ -1,0 +1,60 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./app.js"></script>
+    <title>Document</title>
+  </head>
+  <body onload="app.newPalette()">
+    <div id="app">
+      <nav>
+        <img src="" class="logo" />
+        <navbar v-for="link in navbar" v-bind:link="link"></navbar>
+        <button class="account material-icons navItem">account_circle</button>
+      </nav>
+      <button v-on:click="savePalette">Save</button>
+      <div class="fullPalette">
+        <ul>
+          <div class="palette">
+            <input
+              class="colorFull"
+              type="color"
+              v-model="palettes[palettes.length-1].palette[0]"
+            />
+
+            <input
+              class="colorFull"
+              type="color"
+              v-model="palettes[palettes.length-1].palette[1]"
+            />
+            <input
+              class="colorFull"
+              type="color"
+              v-model="palettes[palettes.length-1].palette[2]"
+            />
+            <input
+              class="colorFull"
+              type="color"
+              v-model="palettes[palettes.length-1].palette[3]"
+            />
+            <input
+              class="colorFull"
+              type="color"
+              v-model="palettes[palettes.length-1].palette[4]"
+            />
+          </div>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

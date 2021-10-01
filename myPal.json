@@ -1,0 +1,12 @@
+{
+  "palettes": [
+    {
+      "name": "palette-1",
+      "palette": ["#363537", "#9BC53D", "#3F7CAC", "#D62246", "#E7E6F7"]
+    },
+    {
+      "name": "palette-2",
+      "palette": ["#2C3E50", "#E74C3C", "#ECF0F1", "#3498DB", "#2980B9"]
+    }
+  ]
+}
